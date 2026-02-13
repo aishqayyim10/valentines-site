@@ -85,7 +85,7 @@ function handleNoClick() {
         yesBtn.style.top = 'auto';
         yesBtn.style.transform = 'scale(2.0)'; // Make it huge but fitting
         
-        mainTitle.innerText = "Okay, now you HAVE to say Yes! ❤️";
+        mainTitle.innerText = "okay sayang, sekarang boleh tekan yes";
     }
 }
 
