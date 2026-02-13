@@ -43,7 +43,7 @@ body {
     
     /* Centering Magic */
     position: absolute; 
-    top: 0px; /* Pulls it up half its height */
+    top: -50px; /* Pulls it up half its height */
     left: 50%;
     transform: translateX(-50%); /* Centers it horizontally */
     z-index: 20;
