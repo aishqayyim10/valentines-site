@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Valentine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <img class="top-banner" src="images/banner.png" alt="Top Banner Image">
+
+    <div class="container">
+        <header class="header">
+            <h1 id="mainTitle">Happy Valentine's Day!</h1>
+        </header>
+
+        <div class="photo-frame">
+            <img id="mainImage" src="images/us.jpg" alt="A photo of us">
+            
+            <img id="secondaryImage" src="images/second-us.jpg" alt="Another photo of us">
+        </div>
+
+        <div class="message">
+            <h2>Dear Nur Iswahani Izzati,</h2>
+            <p>
+                Every moment with you, I feel like the luckiest man alive. 
+                Your smile literally brightens my day, and our memories together are my most treasured possessions. 
+            </p>
+        </div>
+
+        <div class="question-section">
+            <p>I have this one poem that goes like,</p>
+            <p>Roses are red, violets are blue</p>
+            <p>I coded this website for you</p>
+            <p>Specially for you</p>
+
+            <h2>Will you be my Valentine? </h2>
+            
+            <div class="buttons">
+                <button id="yesBtn" onclick="handleYesClick()">YES!</button>
+                <button id="noBtn" onclick="handleNoClick()">No</button>
+            </div>
+            
+            <p id="hint" style="display: none; color: #d63384; font-size: 14px; margin-top: 10px;">
+                you kena tekan no button dulu hihi 
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500&display=swap');
+
+body {
+    background-color: #ffe6e6;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex; /* Centers the card vertically */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* THE CARD CONTAINER */
+.container {
+    background-color: white;
+    padding: 2rem;
+    padding-top: 5rem; /* Extra space at top for the overlapping image */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 90%;
+    
+    position: relative; /* Needed for absolute positioning of elements inside */
+    overflow: visible; /* CRITICAL: Allows the banner image to stick out the top! */
+    
+    margin-top: 50px; /* Pushes the card down so the image doesn't hit browser top */
+    margin-bottom: 50px;
+}
+
+/* THE OVERLAPPING BANNER IMAGE (Profile Style) */
+.top-banner {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures image doesn't stretch */
+    border-radius: 50%; /* Circle shape */
+    border: 6px solid white; /* Thick border to blend with card */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    
+    /* Centering Magic */
+    position: absolute; 
+    top: 0px; /* Pulls it up half its height */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    z-index: 20;
+}
+
+/* TEXT STYLES */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #d63384;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: #d63384;
+    font-size: 1.5rem;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* PHOTOS INSIDE THE BOX (Side-by-Side) */
+.photo-frame {
+    display: flex; /* Puts images in a row */
+    justify-content: center;
+    gap: 10px; /* Space between images */
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.photo-frame img {
+    width: 48%; /* Each image takes up slightly less than half */
+    height: 200px; /* Forces them to be the same height */
+    object-fit: cover; /* Crops the image so it doesn't look squished */
+    border-radius: 10px;
+    border: 4px solid #ffccd5;
+}
+
+/* BUTTON STYLES */
+.buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth growing effect */
+    z-index: 100; /* Keeps button on top */
+}
+
+#yesBtn {
+    background-color: #d63384;
+    color: white;
+    font-weight: bold;
+}
+
+#noBtn {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* FALLING HEARTS ANIMATION */
+.heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.heart {
+    position: absolute;
+    top: -10vh;
+    font-size: 1.5rem;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+        padding-top: 4rem; /* Adjust padding for mobile */
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .photo-frame img {
+        height: 150px; /* Make images slightly shorter on small screens */
+    }
+    .buttons {
+        flex-direction: column; /* Stack buttons on very small screens */
+        gap: 15px;
+    }
+    button {
+        width: 100%;
+    }
+}
